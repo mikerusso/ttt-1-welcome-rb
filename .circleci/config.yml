@@ -43,6 +43,7 @@ jobs:
           command: |
             TEST_FILES="$(circleci tests glob "spec/**/*_spec.rb" | \
               circleci tests split --split-by=timings)"
+            git checkout solution
             bundle exec rspec $TEST_FILES
 
       # collect reports
