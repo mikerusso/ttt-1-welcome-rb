@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: flatironschool/phoeyonce-student-ide:latest
+      - image: alpine:3.7
     steps:
       - checkout
       - run:
@@ -13,5 +13,5 @@ jobs:
           name: Code Has Arrived
           command: |
             ls -al
-            echo '^^^That should look familiar^^^'
+            echo 'It worked.'
 
